@@ -3,6 +3,7 @@
 :root {
   --color-primary: #f5f5f5;
   --color-secondary: #022d33;
+  --color-light: #ffffff;
   --color-danger: #fe5000;
   --transition: all 0.3s ease-in-out;
 }
@@ -20,4 +21,9 @@
   outline: o;
   list-style: none;
   text-decoration: none;
+}
+
+body {
+  background-color: var(--color-primary);
+  overflow-x: hidden;
 }
