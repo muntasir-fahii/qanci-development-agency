@@ -4,6 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <title>Qanci</title>
   </head>
   <body>
@@ -31,12 +36,161 @@
       </span>
     </nav>
     <!-- hero section -->
+    <section id="home" class="home">
+      <div class="hero-headline">
+        <h1>Development</h1>
+        <h1 class="hero-sec-line">
+          <img src="./assets/bracket-test.png" alt="chase" class="bracket" />
+          Agency
+          <img src="./assets/chase2.png" alt="chase" class="chase" />
+        </h1>
+      </div>
+      <div class="hero-img">
+        <img
+          src="./assets/hero-image.png"
+          alt="hero-img"
+          height="1000"
+          width="1850"
+        />
+      </div>
+      <div class="contents">
+        <div class="content-right-col">
+          <div class="right-1">
+            <h2>
+              We bring light, joy to the <br />
+              old, mundane or otherwise overlooked.
+            </h2>
+            <p>Contact us</p>
+          </div>
+          <div class="right-2">
+            <img src="./assets/pin.png" alt="pin" height="32px" width="32px" />
+            <img src="./assets/pinballs.png" alt="pinballs" />
+          </div>
+        </div>
+        <div class="content-left-col">
+          <div class="left-1">
+            <p class="hero-category">E-commerce</p>
+            <p class="hero-category">Fintech</p>
+            <p class="hero-category">Crypto</p>
+            <p class="hero-category">Robotics</p>
+            <p class="hero-category">Saas</p>
+            <p class="hero-category">VCs</p>
+            <p class="hero-category">Product Design</p>
+          </div>
+          <div class="left-2">
+            <div class="left-content-1">
+              <img
+                src="./assets/hero-sec-image.png"
+                alt="hero-sec-image"
+                height="120"
+                width="110"
+              />
+              <p>30+</p>
+            </div>
+
+            <div class="left-content-2">
+              <p>Members</p>
+              <span class="icon-user"
+                ><img src="./assets/user.svg" alt="user" height="26" width="26"
+              /></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <!-- features section -->
+    <div class="features">
+      <p>Trusted by your favorite brands and startups</p>
+      <div class="logos">
+        <div class="logos-slide">
+          <img src="./assets/hotjar-logo-svg-150px.svg" alt="hotjar-logo" />
+          <img src="./assets/pendo-logo-svg-150px.svg" alt="pendo-logo" />
+          <img src="./assets/pingdom-logo-svg-150px.svg" alt="pingdom-logo" />
+          <img src="./assets/livechat-logo-svg-150px.svg" alt="livechat-logo" />
+          <img
+            src="./assets/mailchimp-logo-svg-150px.svg"
+            alt="mailchimp-logo"
+          />
+          <img src="./assets/clearbit-logo-svg-150px.svg" alt="clearbit-logo" />
+        </div>
+      </div>
+    </div>
+
     <!-- works section -->
+
+    <section class="works">
+      <div class="works-content">
+        <div class="upper-content">
+          <h2 class="works-headline">Our recent works</h2>
+          <div class="slider-btns">
+            <div>
+              <button class="btn prev-btn">
+                <img src="./assets/left-arrow.png" alt="left-arrow" />
+              </button>
+            </div>
+            <div>
+              <button class="btn next-btn">
+                <img src="./assets/right-arrow.png" alt="right-arrow" />
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="slider-wrapper">
+          <div class="slide">
+            <div class="slide-item">
+              <img src="./assets/01.png" alt="01" />
+              <p>Image 01</p>
+            </div>
+            <div class="slide-item">
+              <img src="./assets/02.png" alt="02" />
+              <p>Telephone Kiosks KD</p>
+            </div>
+            <div class="slide-item">
+              <img src="./assets/03.png" alt="03" />
+              <p>Mediofary Thema flow</p>
+            </div>
+            <div class="slide-item">
+              <img src="./assets/04.png" alt="04" />
+              <p>Cosnori Avocadopure</p>
+            </div>
+            <div class="slide-item">
+              <img src="./assets/05.png" alt="05" />
+              <p>Image 05</p>
+            </div>
+            <div class="slide-item">
+              <img src="./assets/06.png" alt="06" />
+              <p>Image 06</p>
+            </div>
+            <div class="slide-item">
+              <img src="./assets/07.png" alt="07" />
+              <p>Image 07</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <!-- faq section -->
     <!-- footer section -->
+    <footer>
+      <div class="footer-contents"></div>
+    </footer>
 
     <!-- js -->
     <script src="/script.js"></script>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        rewind: true,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
   </body>
 </html>
