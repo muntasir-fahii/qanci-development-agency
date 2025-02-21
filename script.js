@@ -1,5 +1,21 @@
-var copy = document.querySelector(".logos-slide").cloneNode(true);
-document.querySelector(".logos").appendChild(copy);
+document.addEventListener("DOMContentLoaded", function () {
+  const logosSlide = document.querySelector(".logos-slide");
+  const logosContainer = document.querySelector(".logos");
+
+  // Clone the slide to create an infinite loop effect
+  const clone = logosSlide.cloneNode(true);
+  logosContainer.appendChild(clone);
+
+  // Ensure the container has the correct width
+  function updateWidth() {
+    const totalWidth = logosSlide.scrollWidth;
+    logosContainer.style.width = `${totalWidth * 2}px`;
+  }
+
+  updateWidth();
+});
+
+// slider
 
 document.addEventListener("DOMContentLoaded", function () {
   const slideContainer = document.querySelector(".slide");
@@ -56,3 +72,40 @@ document.addEventListener("DOMContentLoaded", function () {
     updateSlider();
   });
 });
+
+// slider mobile
+
+// faq
+
+document.querySelectorAll(".accordion-header").forEach((header) => {
+  header.addEventListener("click", function () {
+    const accordionItem = this.parentElement;
+    const content = accordionItem.querySelector(".accordion-content");
+    const toggleIcon = this.querySelector(".accordion-toggle img");
+
+    // Close all other accordions
+    document.querySelectorAll(".accordion-item").forEach((item) => {
+      if (item !== accordionItem) {
+        item.classList.remove("active");
+        item.querySelector(".accordion-content").style.display = "none";
+        item.querySelector(".accordion-toggle img").src =
+          "./assets/down-arrow.png";
+      }
+    });
+
+    // Toggle the clicked accordion
+    if (content.style.display === "block") {
+      content.style.display = "none";
+      accordionItem.classList.remove("active");
+      toggleIcon.src = "./assets/down-arrow.png";
+    } else {
+      content.style.display = "block";
+      accordionItem.classList.add("active");
+      toggleIcon.src = "./assets/up-arrow.png";
+    }
+  });
+});
+
+// responsive functions
+
+//navbar
